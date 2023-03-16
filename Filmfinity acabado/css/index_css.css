@@ -1,0 +1,214 @@
+p, h3{
+  font-family: Golos Text;
+  margin: 0px;
+  color: #fff;
+  font-weight: 500;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;  
+}
+
+body{
+  padding-top: 120px;
+  /*background-image: linear-gradient(to bottom, #6fddf2, #8017d1);*/
+  background-image: linear-gradient(to bottom, #9c9c9c, #000000);
+
+}
+
+header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 80px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: -5px;
+  z-index: 999;
+  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: top 0.7s ease-in-out;
+}
+
+#header.hidden {
+  top: -120px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+}
+
+nav li {
+  margin-right: 20px;
+
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+  width: 400px;
+  font-family: Roboto Slab;
+}
+
+.search-bar button {
+  padding: 8px; 
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+#search-button{
+  color: black;
+  font-weight: 700;
+}
+
+
+.search-bar button:hover {
+  background-color: rgb(255, 255, 255);
+  animation: glow-fade-in 0.5s ease-in-out forwards;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0), 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.search-bar button:not(:hover) {
+  animation: glow-fade-out 0.5s ease-in-out forwards;
+}
+
+@keyframes glow-fade-in {
+  from {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.8), 0 0 0 rgba(255, 255, 255, 0.6), 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 rgba(255, 255, 255, 0);
+  }
+  to {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2), 0 0 35px rgba(255, 255, 255, 0.1), 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes glow-fade-out {
+  from {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2), 0 0 35px rgba(255, 255, 255, 0.1), 0 0 35px rgba(255, 255, 255, 0);
+  }
+  to {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.8), 0 0 0 rgba(255, 255, 255, 0.6), 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.user-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+  /* CSS DEL GRID */
+
+
+  .movies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 16px;
+  grid-gap: 20px;
+}
+
+.movie {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color:rgba(255, 255, 255, 0.2);
+}
+
+#drop-down-arrow{
+  height: 15px;
+  width: 15px;
+  filter: invert(100%);
+  cursor: pointer;
+  margin-left: 7px;
+  margin-top: 12px;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#title{
+  font-size: 23px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.movie p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  
+  transition: max-height 0.3s ease-out;
+}
+
+.dropdown-content.show {
+  max-height: 500px;
+  transition: max-height 1s ease-in;
+}
+
+.title-div{
+display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.divider{
+  height: 2px;
+  background-color: white;
+  margin-top: 30px;
+}
+
+footer {
+  background-color: #000000;
+  padding: 20px;
+  text-align: right;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-left: 10px;
+  
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+

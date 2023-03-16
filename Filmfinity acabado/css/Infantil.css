@@ -1,0 +1,8 @@
+#drop-down-arrow{
+  height: 15px;
+  width: 15px;
+  filter: invert(100%);
+  cursor: pointer;
+  padding-left: 7px;
+  padding-top: 7px;
+}
